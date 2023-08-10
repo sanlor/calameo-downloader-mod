@@ -6,12 +6,27 @@ import os
 from PyPDF2 import PdfFileMerger
 from fpdf import FPDF
 from PIL import Image
-import urllib3.contrib.pyopenssl
+#import urllib3.contrib.pyopenssl #dont think this is needed anymore
 import progressbar
+import sys
 
 #Configurations
 book_url_list = []
 only_pdf = False
+
+# the only part that I added. I know next to nothing in python.
+if len(sys.argv) > 1:
+	if sys.argv[1] == '-h':
+		print("main.py URL (In quotes)")
+		sys.exit()
+	else:
+		book_url_list = [sys.argv[1]]
+		#print("downloading from ", sys.argv[1])
+else:
+	print("No URL added. exiting...")
+	sys.exit()
+	
+print("downloading from ", book_url_list)
 
 with requests.Session() as s:
     for book_url in book_url_list:
