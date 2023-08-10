@@ -1,3 +1,7 @@
+**Personal modification**
+A friend asked for some help downloading some e-books. Found this great script but fumbled for 15 minutes before figuring it out that I needed to att the URL manually inside the script.
+I just (badly) added support for arguments to the script.
+
 **Background**
 --
 During the early stages of lockdown, Oxford provided all of their educational books for free online. As an IB student, I saw this and thought that the books could genuinly be useful to me. Unfortunately this offer was on for a limited time, meaning that I needed to find a method of downloading these books.
